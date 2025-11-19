@@ -12,37 +12,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/common.css">
 
   <title>InnTrack</title>
 
   <style>
-    * {
-      font-family: Poppins;
+    .availability-form {
+      margin-top: -50px;
+      z-index: 2;
+      position: relative;
     }
 
-    .h-font {
-      font-family: manrope;
-    }
-
-    /* Remove number arrows */
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    /* Firefox */
-    input[type=number] {
-      -moz-appearance: textfield;
+    @media screen and (max-width: 575px) {
+      .availability-form {
+        margin-top: 25px;
+        padding: 0 35px;
+      }
     }
   </style>
 </head>
 
-<body>
+<body class="bg-light">
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
@@ -126,8 +117,6 @@
             <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
               Note: Your details must match with your valid ID that will be required during check-in.
             </span>
-
-
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-6 ps-0 mb-3">
@@ -171,19 +160,6 @@
             <div class="text-center my-1">
               <button type="submit" class="btn btn-dark shadow-none">Register</button>
             </div>
-
-            <!-- <div class="mb-3">
-              <label class="form-label">Email address</label>
-              <input type="email" class="form-control shado-none">
-            </div>
-            <div class="mb-4">
-              <label class="form-label">Password</label>
-              <input type="password" class="form-control shado-none">
-            </div>
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              
-              <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
-            </div> -->
           </div>
         </form>
       </div>
@@ -191,32 +167,438 @@
   </div>
 
   <!-- Carousel -->
-  <div class="container-fluid">
-    <div class="swiper swiper-container">
+  <div class="container-fluid px-lg-4 mt-4">
+    <div class="swiper swiper-container rounded overflow-hidden">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="images/carousel/exterior.png" />
+        <div class="swiper-slide rounded">
+          <img src="images/carousel/hotel-bldg.png" class="w-100 d-block" />
         </div>
-        <div class="swiper-slide">
-          <img src="images/carousel/room.png" />
+        <div class="swiper-slide rounded">
+          <img src="images/carousel/lobby.png" class="w-100 d-block" />
         </div>
-        <div class="swiper-slide">
-          <img src="images/carousel/gym.png" />
+        <div class="swiper-slide rounded">
+          <img src="images/carousel/pool.png" class="w-100 d-block" />
         </div>
-        <div class="swiper-slide">
-          <img src="images/carousel/pool.png" />
+        <div class="swiper-slide rounded">
+          <img src="images/carousel/pool2.png" class="w-100 d-block" />
+        </div>
+        <div class="swiper-slide rounded">
+          <img src="images/carousel/pool3.png" class="w-100 d-block" />
+        </div>
+        <div class="swiper-slide rounded">
+          <img src="images/carousel/top-pool.png" class="w-100 d-block" />
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Check Availability Form -->
+  <div class="container availability-form">
+    <div class="row">
+      <div class="col-lg-12 bg-white shadow p-4 rounded">
+        <h5 class="mb-4">Check Booking Availability</h5>
+        <form>
+          <div class="row align-items-end">
+            <div class="col-lg-3 mb-3">
+              <label class="form-label" style="font-weight: 500;">Check-in</label>
+              <input type="date" class="form-control shadow-none">
+            </div>
+            <div class="col-lg-3 mb-3">
+              <label class="form-label" style="font-weight: 500;">Check-out</label>
+              <input type="date" class="form-control shadow-none">
+            </div>
+            <div class="col-lg-3 mb-3">
+              <label class="form-label" style="font-weight: 500;">Adult </label>
+              <select class="form-select shadow-none  ">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-lg-2 mb-3">
+              <label class="form-label" style="font-weight: 500;">Children </label>
+              <select class="form-select shadow-none  ">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-lg-1 mb-lg-3 mt-2">
+              <button type="submit" class="btn text-white shadown-none custom-bg">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Rooms -->
+  <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Our Rooms</h2>
+
+  <div class="container">
+    <div class="row">
+      <!-- card 1 -->
+      <div class="col-lg-4 col-md-6 my-3 ">
+
+        <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+          <img src="images/rooms/1.jpg" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5>Simple Room Name</h5>
+            <h6 class="mb-4">Php2570 per night</h6>
+
+            <div class="features mb-4">
+              <h6 class="mb-1">Features</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                2 Rooms
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                2 Bathrooms
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                1 Balcony
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                3 sofa
+              </span>
+            </div>
+
+            <div class="facilities mb-4">
+              <h6 class="mb-1">Facilities</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Wifi
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Television
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                AC
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Room heater
+              </span>
+            </div>
+            <div class="rating mb-4 ">
+              <h6 class="mb-1">Rating</h6>
+              <span class="badge rounded-pill bg-light">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </span>
+            </div>
+            <div class="d-flex justify-content-evenly mb-2">
+              <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+              <a href="#" class="btn btn-sm btn-outline-dark shadow-none">More details</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- card 2 -->
+      <div class="col-lg-4 col-md-6 my-3 ">
+
+        <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+          <img src="images/rooms/2.png" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5>Simple Room Name</h5>
+            <h6 class="mb-4">Php4490 per night</h6>
+
+            <div class="features mb-4">
+              <h6 class="mb-1">Features</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                2 Rooms
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                2 Bathrooms
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                1 Balcony
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                3 sofa
+              </span>
+            </div>
+
+            <div class="facilities mb-4">
+              <h6 class="mb-1">Facilities</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Wifi
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Television
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                AC
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Room heater
+              </span>
+            </div>
+            <div class="rating mb-4 ">
+              <h6 class="mb-1">Rating</h6>
+              <span class="badge rounded-pill bg-light">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </span>
+            </div>
+            <div class="d-flex justify-content-evenly mb-2">
+              <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+              <a href="#" class="btn btn-sm btn-outline-dark shadow-none">More details</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- card 3-->
+      <div class="col-lg-4 col-md-6 my-3 ">
+
+        <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+          <img src="images/rooms/3.png" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5>Simple Room Name</h5>
+            <h6 class="mb-4">Php6990 per night</h6>
+
+            <div class="features mb-4">
+              <h6 class="mb-1">Features</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                2 Rooms
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                2 Bathrooms
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                1 Balcony
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                3 sofa
+              </span>
+            </div>
+
+            <div class="facilities mb-4">
+              <h6 class="mb-1">Facilities</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Wifi
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Television
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                AC
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                Room heater
+              </span>
+            </div>
+            <div class="rating mb-4 ">
+              <h6 class="mb-1">Rating</h6>
+              <span class="badge rounded-pill bg-light">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </span>
+            </div>
+            <div class="d-flex justify-content-evenly mb-2">
+              <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+              <a href="#" class="btn btn-sm btn-outline-dark shadow-none">More details</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-12 text-center mt-5">
+        <a href="" class="btn btn-sm btn-outline-dark rounded  fw-bold shadow-none">More Rooms ></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Facilities -->
+  <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Our Facilities</h2>
+
+  <div class="container">
+    <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded shadow py-4 my-3">
+        <img src="images/features/wifi.svg" width="80px" alt="">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded shadow py-4 my-3">
+        <img src="images/features/wifi.svg" width="80px" alt="">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded shadow py-4 my-3">
+        <img src="images/features/wifi.svg" width="80px" alt="">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded shadow py-4 my-3">
+        <img src="images/features/wifi.svg" width="80px" alt="">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded shadow py-4 my-3">
+        <img src="images/features/wifi.svg" width="80px" alt="">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-12 text-center mt-5">
+        <a href="" class="btn btn-sm btn-outline-dark rounded  fw-bold shadow-none">More Facilities ></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Testimonials</h2>
+
+  <div class="container">
+    <div class="swiper swiper-testimonials">
+      <div class="swiper-wrapper mb-5">
+
+        <div class="swiper-slide bg-white p-4 rounded overflow-hidden">
+          <div class="profile d-flex align-items-center mb-3 ">
+            <img src="images/features/star.svg" width="30px">
+            <h6 class="m-0 ms-2">Random user1</h6>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Earum eos ullam molestiae quaerat nesciunt dignissimos, debitis,
+            nam aliquid voluptatem velit molestias incidunt libero eum quos
+            quam optio voluptatum, quis accusantium.
+          </p>
+          <div class="rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
+
+        <div class="swiper-slide bg-white p-4 rounded overflow-hidden">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="images/features/star.svg" width="30px">
+            <h6 class="m-0 ms-2">Random user1</h6>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Earum eos ullam molestiae quaerat nesciunt dignissimos, debitis,
+            nam aliquid voluptatem velit molestias incidunt libero eum quos
+            quam optio voluptatum, quis accusantium.
+          </p>
+          <div class="rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
+
+        <div class="swiper-slide bg-white p-4 rounded overflow-hidden">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="images/features/star.svg" width="30px">
+            <h6 class="m-0 ms-2">Random user1</h6>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Earum eos ullam molestiae quaerat nesciunt dignissimos, debitis,
+            nam aliquid voluptatem velit molestias incidunt libero eum quos
+            quam optio voluptatum, quis accusantium.
+          </p>
+          <div class="rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
+
+        <div class="swiper-slide bg-white p-4 rounded overflow-hidden">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="images/features/star.svg" width="30px">
+            <h6 class="m-0 ms-2">Random user1</h6>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Earum eos ullam molestiae quaerat nesciunt dignissimos, debitis,
+            nam aliquid voluptatem velit molestias incidunt libero eum quos
+            quam optio voluptatum, quis accusantium.
+          </p>
+          <div class="rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+
+
+  <br><br><br>
+  <br><br><br>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
+  <!-- Hero images -->
   <script>
     var swiper = new Swiper(".swiper-container", {
       spaceBetween: 30,
-      effect: "parallax"
+      effect: "parallax",
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false
+      }
+    });
+  </script>
+
+  <!-- Testimonials JS -->
+  <script>
+    var swiper = new Swiper(".swiper-testimonials", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      slidesPerView: "3",
+      loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }
     });
   </script>
 </body>
