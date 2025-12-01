@@ -17,7 +17,7 @@
           <a class="nav-link me-2" href="facilities.php">Facilities</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link me-2" href="#">Contact Us</a>
+          <a class="nav-link me-2" href="contact.php">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About</a>
@@ -49,11 +49,11 @@
         <div class="modal-body">
           <div class="mb-3">
             <label class="form-label">Email address</label>
-            <input type="email" class="form-control shado-none">
+            <input type="email" class="form-control shadow-none">
           </div>
           <div class="mb-4">
             <label class="form-label">Password</label>
-            <input type="password" class="form-control shado-none">
+            <input type="password" class="form-control shadow-none">
           </div>
           <div class="d-flex align-items-center justify-content-between mb-2">
             <button type="submit" class="btn btn-dark shadow-none">Login</button>

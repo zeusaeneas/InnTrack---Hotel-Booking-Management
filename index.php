@@ -363,7 +363,7 @@
     <div class="swiper swiper-testimonials">
       <div class="swiper-wrapper mb-5">
 
-        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden">
+        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden mt-2" style="border: 2px solid #3b37ad25;">
           <div class="profile d-flex align-items-center mb-3 ">
             <img src="images/features/star.svg" width="30px">
             <h6 class="m-0 ms-2">Random user1</h6>
@@ -382,7 +382,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden">
+        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden mt-2" style="border: 2px solid #3b37ad25;">
           <div class="profile d-flex align-items-center mb-3">
             <img src="images/features/star.svg" width="30px">
             <h6 class="m-0 ms-2">Random user1</h6>
@@ -401,7 +401,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden">
+        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden mt-2" style="border: 2px solid #3b37ad25;">
           <div class="profile d-flex align-items-center mb-3">
             <img src="images/features/star.svg" width="30px">
             <h6 class="m-0 ms-2">Random user1</h6>
@@ -420,7 +420,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden">
+        <div class="swiper-slide bg-white p-4 rounded-4 overflow-hidden mt-2" style="border: 2px solid #3b37ad25;">
           <div class="profile d-flex align-items-center mb-3">
             <img src="images/features/star.svg" width="30px">
             <h6 class="m-0 ms-2">Random user1</h6>
@@ -449,13 +449,13 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded-4">
+      <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded-4" style="border: 2px solid #3b37ad25;">
         <iframe class="w-100 rounded" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.5592376914806!2d123.89408907583505!3d10.297052967851192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfd54c152e5%3A0xf9b2f3f4bd996da0!2sUniversity%20of%20Cebu%20-%20Main%20Campus!5e0!3m2!1sen!2sph!4v1763606801558!5m2!1sen!2sph" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="col-lg-4 col-md-4">
 
         <!-- Call us -->
-        <div class="bg-white p-4 rounded-4 mb-4">
+        <div class="bg-white p-4 rounded-4 mb-4" style="border: 2px solid #3b37ad25;">
           <h5>Call us</h5>
           <a href="tel: +63922335842" class="d-inline-block mb-2 text-decoration-none text-dark">
             <i class="bi bi-telephone-fill"></i>
@@ -469,7 +469,7 @@
         </div>
 
         <!-- Follow  us -->
-        <div class="bg-white p-4 rounded-4 mb-0">
+        <div class="bg-white p-4 rounded-4 mb-0" style="border: 2px solid #3b37ad25;">
           <h5>Follow us</h5>
           <a href="#" class="d-inline-block mb-3">
             <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
