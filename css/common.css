@@ -1,6 +1,6 @@
 :root {
-  --teal:#2ec1ac;
-  --teal_hover:#279e8c;
+  --primary: 	#3b38ad;
+  --primary_hover: #3b37adc9;
 }
 
 * {
@@ -25,11 +25,11 @@ input[type="number"] {
 }
 
 .custom-bg {
-  background-color: var(--teal);
-  border: 1px solid var(--teal);
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .custom-bg:hover {
-  background-color: var(--teal_hover);
-  border-color: var(--teal_hover);
+  background-color: var(--primary_hover);
+  border-color: var(--primary_hover);
 }

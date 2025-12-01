@@ -10,7 +10,8 @@
 
   <style>
     :root {
-      --teal: #2ec1ac;
+      --primary: #3b38ad;
+      --primary_hover: #3b37adc9;
     }
 
     @media screen and (max-width: 767.98px) {
@@ -21,7 +22,7 @@
     }
 
     .box {
-      border-top-color: var(--teal) !important;
+      border-top-color: var(--primary) !important;
     }
   </style>
 </head>

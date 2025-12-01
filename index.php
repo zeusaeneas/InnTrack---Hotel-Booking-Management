@@ -107,7 +107,7 @@
     <div class="row">
       <!-- card 1 -->
       <div class="col-lg-4 col-md-6 my-3">
-        <div class="card rounded-4 overflow-hidden" style="max-width: 350px; margin: auto; border: 2px solid #2ec1ab42;">
+        <div class="card rounded-4 overflow-hidden" style="max-width: 350px; margin: auto; border: 2px solid #3b37ad25;">
           <img src="images/rooms/1.jpg" class="card-img-top" alt="...">
 
           <div class="card-body">
@@ -166,7 +166,7 @@
       <!-- card 2 -->
       <div class="col-lg-4 col-md-6 my-3 ">
 
-        <div class="card rounded-4 overflow-hidden" style="max-width: 350px; margin: auto; border: 2px solid #2ec1ab42;">
+        <div class="card rounded-4 overflow-hidden" style="max-width: 350px; margin: auto; border: 2px solid #3b37ad25;">
           <img src="images/rooms/2.png" class="card-img-top" alt="...">
 
           <div class="card-body">
@@ -226,7 +226,7 @@
       <!-- card 3-->
       <div class="col-lg-4 col-md-6 my-3 ">
 
-        <div class="card rounded-4 overflow-hidden" style="max-width: 350px; margin: auto; border: 2px solid #2ec1ab42;">
+        <div class="card rounded-4 overflow-hidden" style="max-width: 350px; margin: auto; border: 2px solid #3b37ad25;">
           <img src="images/rooms/3.png" class="card-img-top" alt="...">
 
           <div class="card-body">
@@ -294,23 +294,23 @@
 
   <div class="container">
     <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #2ec1ab42;">
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #3b37ad25;">
         <img src="images/features/wifi.svg" width="80px" alt="">
         <h5 class="mt-3">Wifi</h5>
       </div>
-      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #2ec1ab42;">
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #3b37ad25;">
         <img src="images/features/wifi.svg" width="80px" alt="">
         <h5 class="mt-3">Wifi</h5>
       </div>
-      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #2ec1ab42;">
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #3b37ad25;">
         <img src="images/features/wifi.svg" width="80px" alt="">
         <h5 class="mt-3">Wifi</h5>
       </div>
-      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #2ec1ab42;">
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #3b37ad25;">
         <img src="images/features/wifi.svg" width="80px" alt="">
         <h5 class="mt-3">Wifi</h5>
       </div>
-      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #2ec1ab42;">
+      <div class="col-lg-2 col-md-2 text-center bg-whtie rounded-4 py-4 my-3" style="border: 2px solid #3b37ad25;">
         <img src="images/features/wifi.svg" width="80px" alt="">
         <h5 class="mt-3">Wifi</h5>
       </div>
@@ -439,21 +439,21 @@
         <div class="bg-white p-4 rounded-4 mb-0">
           <h5>Follow us</h5>
           <a href="#" class="d-inline-block mb-3">
-            <span class="badge text-dark fs-6 p-2" style="background-color: #2ec1ab42;">
+            <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
               <i class="bi bi-facebook me-1"></i>
               Facebook
             </span>
           </a>
           <br>
           <a href="#" class="d-inline-block mb-3">
-            <span class="badge text-dark fs-6 p-2" style="background-color: #2ec1ab42;">
+            <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
               <i class="bi bi-instagram me-1"></i>
               Instagram
             </span>
           </a>
           <br>
           <a href="#" class="d-inline-block">
-            <span class="badge text-dark fs-6 p-2" style="background-color: #2ec1ab42;">
+            <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
               <i class="bi bi-tiktok me-1"></i>
               TikTok
             </span>

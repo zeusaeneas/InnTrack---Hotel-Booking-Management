@@ -9,12 +9,12 @@
 
   <style>
     :root {
-      --teal: #2ec1ac !important;
-      --teal_hover: #279e8c;
+      --primary: #3b38ad;
+      --primary_hover: #3b37adc9;
     }
 
     .pop:hover {
-      border-top-color: var(--teal) !important;
+      border-top-color: var(--primary) !important;
       transform: scale(1.03);
       transition: all 0.3s ease;
     }
