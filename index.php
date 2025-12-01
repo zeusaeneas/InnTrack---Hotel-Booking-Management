@@ -145,6 +145,17 @@
                 Room heater
               </span>
             </div>
+
+            <div class="guests mb-4">
+              <h6 class="mb-1">Guests</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                5 adults
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                4 Children
+              </span>
+            </div>
+
             <div class="rating mb-4 ">
               <h6 class="mb-1">Rating</h6>
               <span class="badge rounded-pill bg-light">
@@ -204,6 +215,17 @@
                 Room heater
               </span>
             </div>
+
+            <div class="guests mb-4">
+              <h6 class="mb-1">Guests</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                5 adults
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                4 Children
+              </span>
+            </div>
+
             <div class="rating mb-4 ">
               <h6 class="mb-1">Rating</h6>
               <span class="badge rounded-pill bg-light">
@@ -264,6 +286,17 @@
                 Room heater
               </span>
             </div>
+
+            <div class="guests mb-4">
+              <h6 class="mb-1">Guests</h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                5 adults
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
+                4 Children
+              </span>
+            </div>
+
             <div class="rating mb-4 ">
               <h6 class="mb-1">Rating</h6>
               <span class="badge rounded-pill bg-light">
