@@ -83,9 +83,86 @@
     </div>
   </div>
 
-  
+  <h3 class="my-5 fw-bold h-font text-center">Management Team</h3>
+
+  <div class="container px-4">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper mb-5">
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/person.jpg" class="w-100">
+          <h5 class="mt-2">
+            Sung Jinwoo
+          </h5>
+        </div>
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/person.jpg" class="w-100">
+          <h5 class="mt-2">
+            Sung Jinwoo
+          </h5>
+        </div>
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/person.jpg" class="w-100">
+          <h5 class="mt-2">
+            Sung Jinwoo
+          </h5>
+        </div>
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/person.jpg" class="w-100">
+          <h5 class="mt-2">
+            Sung Jinwoo
+          </h5>
+        </div>
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/person.jpg" class="w-100">
+          <h5 class="mt-2">
+            Sung Jinwoo
+          </h5>
+        </div>
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/person.jpg" class="w-100">
+          <h5 class="mt-2">
+            Sung Jinwoo
+          </h5>
+        </div>
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/person.jpg" class="w-100">
+          <h5 class="mt-2">
+            Sung Jinwoo
+          </h5>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+
 
   <?php require('sections/footer.php') ?>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 40,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }
+    });
+  </script>
 
 </body>
 
