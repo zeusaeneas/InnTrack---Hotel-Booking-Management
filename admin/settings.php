@@ -1,24 +1,26 @@
 <?php
-    require_once('inc/essentials.php');
-    require('inc/links.php');
-    adminLogin();
+require_once('inc/essentials.php');
+require('inc/links.php');
+adminLogin();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Settings</title>
 </head>
+
 <body class="bg-light">
 
-    <?php require('inc/header.php');?>
+    <?php require('inc/header.php'); ?>
 
     <div class="container-fluid" id="main-content">
         <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-                <h3 class="mb-4">SETTINGS</h3> 
+                <h3 class="mb-4">SETTINGS</h3>
 
                 <!-- Alert Container -->
                 <div id="alert-container" style="position: fixed; top: 80px; right: 25px; z-index: 1050; min-width: 350px;"></div>
@@ -31,7 +33,7 @@
                             <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#general-s">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </button>
-                        </div>   
+                        </div>
                         <h6 class="card-subtitle mb-1 fw-bold">Site Title</h6>
                         <p class="card-text" id="site_title"></p>
                         <h6 class="card-subtitle mb-1 fw-bold">About us</h6>
@@ -74,7 +76,7 @@
                             <div class="form-check form-switch">
                                 <input onchange="upd_shutdown()" class="form-check-input" type="checkbox" role="switch" id="shutdown-toggle">
                             </div>
-                        </div>   
+                        </div>
                         <p class="card-text">
                             No customers will be allowed to book hotel room, when shutdown mode is turned on.
                         </p>
@@ -104,11 +106,11 @@
                                     <h6 class="card-subtitle mb-1 fw-bold">Phone Numbers</h6>
                                     <p class="card-text mb-1">
                                         <i class="bi bi-telephone-fill"></i>
-                                        <span id="pn1"></span>                
+                                        <span id="pn1"></span>
                                     </p>
                                     <p class="card-text">
                                         <i class="bi bi-telephone-fill"></i>
-                                        <span id="pn2"></span>                
+                                        <span id="pn2"></span>
                                     </p>
                                 </div>
                                 <div class="mb-4">
@@ -121,15 +123,15 @@
                                     <h6 class="card-subtitle mb-1 fw-bold">Social Links</h6>
                                     <p class="card-text mb-1">
                                         <i class="bi bi-facebook me-1"></i>
-                                        <span id="fb"></span>                
+                                        <span id="fb"></span>
                                     </p>
                                     <p class="card-text mb-1">
                                         <i class="bi bi-instagram me-1"></i>
-                                        <span id="ig"></span>                
+                                        <span id="ig"></span>
                                     </p>
                                     <p class="card-text">
                                         <i class="bi bi-tiktok me-1"></i>
-                                        <span id="tt"></span>                
+                                        <span id="tt"></span>
                                     </p>
                                 </div>
                                 <div class="mb-4">
@@ -137,7 +139,7 @@
                                     <iframe id="iframe" class="border p-2 w-100" loading="lazy"></iframe>
                                 </div>
                             </div>
-                        </div>                             
+                        </div>
                     </div>
                 </div>
 
@@ -165,11 +167,11 @@
                                                     <label class="form-label fw-bold">Phone Numbers (with country code)</label>
                                                     <div class="input-group mb-3">
                                                         <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                        <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
+                                                        <input type="number" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
                                                     </div>
                                                     <div class="input-group mb-3">
                                                         <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                        <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none">
+                                                        <input type="number" name="pn2" id="pn2_inp" class="form-control shadow-none">
                                                     </div>
                                                 </div>
                                                 <div class="mb-3">
@@ -199,7 +201,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>                              
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" onclick="contacts_inp(contacts_data)" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
@@ -218,7 +220,7 @@
                             <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#team-s">
                                 <i class="bi bi-plus-square"></i> Add
                             </button>
-                        </div>   
+                        </div>
 
                         <div class="row" id="team-data">
 
@@ -256,8 +258,8 @@
             </div>
         </div>
     </div>
-    
-    <?php require('inc/scripts.php'); ?> 
+
+    <?php require('inc/scripts.php'); ?>
 
     <script>
         let general_data, contacts_data;
@@ -271,7 +273,7 @@
             let bgColor = (type === 'success') ? '#d4edda' : '#f8d7da';
             let textColor = (type === 'success') ? '#155724' : '#721c24';
             let borderColor = (type === 'success') ? '#c3e6cb' : '#f5c6cb';
-            
+
             let alertDiv = document.createElement('div');
             alertDiv.className = 'alert alert-dismissible fade show';
             alertDiv.style.cssText = `background-color: ${bgColor}; color: ${textColor}; border: 1px solid ${borderColor}; border-radius: 0.25rem; min-width: 300px;`;
@@ -279,10 +281,10 @@
                 <strong>${msg}</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             `;
-            
+
             alertContainer.innerHTML = '';
             alertContainer.appendChild(alertDiv);
-            
+
             setTimeout(function() {
                 let bsAlert = new bootstrap.Alert(alertDiv);
                 bsAlert.close();
@@ -293,7 +295,7 @@
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            
+
             xhr.onload = function() {
                 general_data = JSON.parse(this.responseText);
 
@@ -315,10 +317,10 @@
 
         document.getElementById('general_s_form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             let site_title_val = document.getElementById('site_title_inp').value;
             let site_about_val = document.getElementById('site_about_inp').value;
-            
+
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -326,8 +328,8 @@
             xhr.onload = function() {
                 let modalElement = document.getElementById('general-s');
                 let modal = bootstrap.Modal.getInstance(modalElement);
-                
-                if(this.responseText == 1) {
+
+                if (this.responseText == 1) {
                     alert('success', 'Changes saved!');
                     get_general();
                     modal.hide();
@@ -346,14 +348,14 @@
         function upd_shutdown() {
             let isChecked = document.getElementById('shutdown-toggle').checked;
             let shutdownValue = isChecked ? 1 : 0;
-            
+
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
             xhr.onload = function() {
-                if(this.responseText == 1) {
-                    if(shutdownValue == 1) {
+                if (this.responseText == 1) {
+                    if (shutdownValue == 1) {
                         alert('success', 'Site has been shutdown!');
                     } else {
                         alert('success', 'Shutdown mode off!');
@@ -368,11 +370,11 @@
             xhr.send('upd_shutdown=' + shutdownValue);
         }
 
-        function get_contacts() {    
+        function get_contacts() {
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            
+
             xhr.onload = function() {
                 contacts_data = JSON.parse(this.responseText);
 
@@ -405,17 +407,17 @@
 
         document.getElementById('contact_s_form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             let formData = 'address=' + encodeURIComponent(document.getElementById('address_inp').value) +
-                          '&gmap=' + encodeURIComponent(document.getElementById('gmap_inp').value) +
-                          '&pn1=' + encodeURIComponent(document.getElementById('pn1_inp').value) +
-                          '&pn2=' + encodeURIComponent(document.getElementById('pn2_inp').value) +
-                          '&email=' + encodeURIComponent(document.getElementById('email_inp').value) +
-                          '&fb=' + encodeURIComponent(document.getElementById('fb_inp').value) +
-                          '&ig=' + encodeURIComponent(document.getElementById('ig_inp').value) +
-                          '&tt=' + encodeURIComponent(document.getElementById('tt_inp').value) +
-                          '&iframe=' + encodeURIComponent(document.getElementById('iframe_inp').value) +
-                          '&upd_contacts=1';
+                '&gmap=' + encodeURIComponent(document.getElementById('gmap_inp').value) +
+                '&pn1=' + encodeURIComponent(document.getElementById('pn1_inp').value) +
+                '&pn2=' + encodeURIComponent(document.getElementById('pn2_inp').value) +
+                '&email=' + encodeURIComponent(document.getElementById('email_inp').value) +
+                '&fb=' + encodeURIComponent(document.getElementById('fb_inp').value) +
+                '&ig=' + encodeURIComponent(document.getElementById('ig_inp').value) +
+                '&tt=' + encodeURIComponent(document.getElementById('tt_inp').value) +
+                '&iframe=' + encodeURIComponent(document.getElementById('iframe_inp').value) +
+                '&upd_contacts=1';
 
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
@@ -424,8 +426,8 @@
             xhr.onload = function() {
                 let modalElement = document.getElementById('contacts-s');
                 let modal = bootstrap.Modal.getInstance(modalElement);
-                
-                if(this.responseText == 1) {
+
+                if (this.responseText == 1) {
                     alert('success', 'Changes saved!');
                     get_contacts();
                     modal.hide();
@@ -454,23 +456,19 @@
                 let modalElement = document.getElementById('team-s');
                 let modal = bootstrap.Modal.getInstance(modalElement);
                 modal.hide();
-                
-                if(this.responseText == 'inv_img') {
+
+                if (this.responseText == 'inv_img') {
                     alert('error', 'Only JPG and PNG images are allowed!');
-                }
-                else if(this.responseText == 'inv_size') {
+                } else if (this.responseText == 'inv_size') {
                     alert('error', 'Image should be less than 2MB!');
-                }
-                else if(this.responseText == 'upd_failed') {
+                } else if (this.responseText == 'upd_failed') {
                     alert('error', 'Image upload failed!');
-                }
-                else if(this.responseText == 1) {
+                } else if (this.responseText == 1) {
                     alert('success', 'New member added!');
                     member_name_inp.value = '';
                     member_picture_inp.value = '';
                     get_members();
-                }
-                else {
+                } else {
                     alert('error', 'Server error!');
                 }
             }
@@ -482,7 +480,7 @@
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            
+
             xhr.onload = function() {
                 document.getElementById('team-data').innerHTML = this.responseText;
             }
@@ -493,13 +491,12 @@
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            
+
             xhr.onload = function() {
-                if(this.responseText == 1) {
+                if (this.responseText == 1) {
                     alert('success', 'Member removed!');
                     get_members();
-                }
-                else {
+                } else {
                     alert('error', 'Server down!');
                 }
             }
@@ -515,4 +512,5 @@
     </script>
 
 </body>
+
 </html>
