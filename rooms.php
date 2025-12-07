@@ -8,7 +8,7 @@
   <title>InnTrack | Rooms</title>
 </head>
 
-<body class="bg-light">
+<body>
 
   <?php require('sections/header.php') ?>
 

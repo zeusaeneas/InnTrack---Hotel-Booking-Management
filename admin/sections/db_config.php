@@ -2,7 +2,7 @@
  
     $hname = 'localhost';
     $uname = 'root';
-    $pass = 'zeus';
+    $pass = '';
     $db = 'inntrack';
 
     $con = mysqli_connect($hname,$uname,$pass,$db);

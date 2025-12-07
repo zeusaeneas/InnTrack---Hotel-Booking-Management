@@ -28,7 +28,7 @@
   </style>
 </head>
 
-<body class="bg-light">
+<body>
 
   <?php require('sections/header.php') ?>
 

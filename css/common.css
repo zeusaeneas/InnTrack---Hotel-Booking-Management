@@ -37,3 +37,13 @@ input[type="number"] {
 .custom-border {
   border: 2px solid #3b37ad25;
 }
+
+.navbar-blur {
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+body {
+  background-color: (255, 255, 255, 1);
+}
