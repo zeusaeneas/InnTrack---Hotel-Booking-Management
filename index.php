@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php require('sections/links.php') ?>
+  <?php require('inc/links.php') ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <title>InnTrack</title>
 
@@ -30,7 +30,7 @@
 
 <body>
 
-  <?php require('sections/header.php') ?>
+  <?php require('inc/header.php') ?>
 
   <!-- Carousel -->
   <div class="container-fluid px-lg-4 mt-4">
@@ -445,6 +445,13 @@
 
 
   <!-- Reach Us -->
+  <?php
+  $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no=`=?";
+  $values = [1];
+  $contact_r = mysqli_fetch_assoc(select($contact_q, $values, 'i'));
+  print($contact_r);
+  ?>
+
   <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Reach Us</h2>
 
   <div class="container">
@@ -497,7 +504,7 @@
   </div>
 
 
-  <?php require('sections/footer.php') ?>
+  <?php require('inc/footer.php') ?>
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

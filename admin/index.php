@@ -1,6 +1,6 @@
 <?php
-    require('sections/essentials.php');
-    require('sections/db_config.php');
+    require('inc/essentials.php');
+    require('inc/db_config.php');
 
 
     if(session_status() === PHP_SESSION_NONE){
@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login Panel</title>
-    <?php require('sections/links.php'); ?>
+    <?php require('inc/links.php'); ?>
     <style>
         div.login-form{
             position: absolute;
@@ -75,6 +75,6 @@
 ?>
 
 
-<?php require('sections/scripts.php'); ?>
+<?php require('inc/scripts.php'); ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-    require('sections/essentials.php');
+    require('inc/essentials.php');
 
     session_start();
     session_destroy();

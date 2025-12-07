@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php require('sections/links.php') ?>
+  <?php require('inc/links.php') ?>
   <title>InnTrack | Rooms</title>
 </head>
 
 <body>
 
-  <?php require('sections/header.php') ?>
+  <?php require('inc/header.php') ?>
 
   <div class="my-5 px-4">
     <h2 class="fw-bold h-font text-center">OUR ROOMS</h2>
@@ -237,7 +237,7 @@
     </div>
   </div>
 
-  <?php require('sections/footer.php') ?>
+  <?php require('inc/footer.php') ?>
 
 </body>
 

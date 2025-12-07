@@ -1,6 +1,6 @@
 <?php
-    require_once('sections/essentials.php');
-    require('sections/links.php');
+    require_once('inc/essentials.php');
+    require('inc/links.php');
     adminLogin();
 ?>
 
@@ -16,7 +16,7 @@
 
     <?php showAlert(); ?> 
 
-    <?php require('sections/header.php');?>
+    <?php require('inc/header.php');?>
 
     <div class="container-fluid" id="main-content">
         <div class ="row">
@@ -26,6 +26,6 @@
         </div>
     </div>
     
-    <?php require('sections/scripts.php'); ?> 
+    <?php require('inc/scripts.php'); ?> 
 </body>
 </html>
