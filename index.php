@@ -446,10 +446,9 @@
 
   <!-- Reach Us -->
   <?php
-  $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no=`=?";
+  $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no`=?";
   $values = [1];
   $contact_r = mysqli_fetch_assoc(select($contact_q, $values, 'i'));
-  print($contact_r);
   ?>
 
   <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Reach Us</h2>
@@ -457,42 +456,55 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded-4" style="border: 2px solid #3b37ad25;">
-        <iframe class="w-100 rounded" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.5592376914806!2d123.89408907583505!3d10.297052967851192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfd54c152e5%3A0xf9b2f3f4bd996da0!2sUniversity%20of%20Cebu%20-%20Main%20Campus!5e0!3m2!1sen!2sph!4v1763606801558!5m2!1sen!2sph" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="w-100 rounded" height="320px" src="<?php echo $contact_r['iframe'] ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="col-lg-4 col-md-4">
 
         <!-- Call us -->
         <div class="bg-white p-4 rounded-4 mb-4" style="border: 2px solid #3b37ad25;">
           <h5>Call us</h5>
-          <a href="tel: +63922335842" class="d-inline-block mb-2 text-decoration-none text-dark">
+          <a href="tel: +<?php echo $contact_r['pn1'] ?>" class="d-inline-block mb-2 text-decoration-none text-dark">
             <i class="bi bi-telephone-fill"></i>
-            +63922335842
+            +<?php echo $contact_r['pn1'] ?>
           </a>
           <br>
-          <a href="tel: +63922335842" class="d-inline-block mb-2 text-decoration-none text-dark">
+          <?php
+          if ($contact_r['pn2'] != '') {
+            echo <<<data
+           <a href="tel: +$contact_r[pn2]" class="d-inline-block mb-2 text-decoration-none text-dark">
             <i class="bi bi-telephone-fill"></i>
-            +63922335842
+            +$contact_r[pn2]
           </a>
+          data;
+          }
+          ?>
         </div>
 
         <!-- Follow  us -->
         <div class="bg-white p-4 rounded-4 mb-0" style="border: 2px solid #3b37ad25;">
           <h5>Follow us</h5>
-          <a href="#" class="d-inline-block mb-3">
-            <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
-              <i class="bi bi-facebook me-1"></i>
-              Facebook
-            </span>
-          </a>
-          <br>
-          <a href="#" class="d-inline-block mb-3">
+          <?php
+          if ($contact_r['fb'] != '') {
+            echo <<<data
+            <a href="$contact_r[fb]" class="d-inline-block mb-3" target="_blank" >
+              <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
+                <i class="bi bi-facebook me-1"></i>
+                Facebook
+              </span>
+            </a>
+            <br>
+            data;
+          }
+          ?>
+
+          <a href="<?php echo $contact_r['ig'] ?>" target="_blank" class="d-inline-block mb-3">
             <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
               <i class="bi bi-instagram me-1"></i>
               Instagram
             </span>
           </a>
           <br>
-          <a href="#" class="d-inline-block">
+          <a href="<?php echo $contact_r['tt'] ?>" target="_blank" class="d-inline-block">
             <span class="badge text-dark fs-6 p-2" style="background-color: #3b37ad25;">
               <i class="bi bi-tiktok me-1"></i>
               TikTok
