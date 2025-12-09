@@ -9,6 +9,7 @@
 
     define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/InnTrack/images/');
     define('ABOUT_FOLDER', 'about/');
+    define('CAROUSEL_FOLDER', 'carousel/');
 
     function adminLogin()
     {
