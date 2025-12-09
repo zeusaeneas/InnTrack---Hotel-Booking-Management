@@ -36,24 +36,17 @@
   <div class="container-fluid px-lg-4 mt-4">
     <div class="swiper swiper-container rounded overflow-hidden">
       <div class="swiper-wrapper">
-        <div class="swiper-slide rounded">
-          <img src="images/carousel/hotel-bldg.png" class="w-100 d-block" />
-        </div>
-        <div class="swiper-slide rounded">
-          <img src="images/carousel/lobby.png" class="w-100 d-block" />
-        </div>
-        <div class="swiper-slide rounded">
-          <img src="images/carousel/pool.png" class="w-100 d-block" />
-        </div>
-        <div class="swiper-slide rounded">
-          <img src="images/carousel/pool2.png" class="w-100 d-block" />
-        </div>
-        <div class="swiper-slide rounded">
-          <img src="images/carousel/pool3.png" class="w-100 d-block" />
-        </div>
-        <div class="swiper-slide rounded">
-          <img src="images/carousel/top-pool.png" class="w-100 d-block" />
-        </div>
+        <?php
+        $res = selectAll('carousel');
+        while ($row = mysqli_fetch_assoc($res)) {
+          $path = CAROUSEL_IMG_PATH;
+          echo <<<data
+            <div class="swiper-slide rounded">
+              <img src="$path$row[image]" class="w-100 d-block" />
+            </div>
+          data;
+        }
+        ?>
       </div>
     </div>
   </div>
