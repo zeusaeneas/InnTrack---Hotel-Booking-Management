@@ -16,6 +16,10 @@ define('FACILITIES_FOLDER', 'facilities/');
 define('ROOMS_FOLDER', 'rooms/');
 define('USERS_FOLDER', 'users/');
 
+// sendgrid api key
+
+define('SENDGRID_API_KEY', "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");
+
 function adminLogin()
 {
     if (session_status() === PHP_SESSION_NONE) {
@@ -50,7 +54,7 @@ function alert($type, $msg)
 
 function uploadImage($image, $folder)
 {
-    $valid_mime = ['image/jpeg', 'image/png', 'image/webph'];
+    $valid_mime = ['image/jpeg', 'image/png', 'image/webp'];
     $img_mime = $image['type'];
 
     if (!in_array($img_mime, $valid_mime)) {
@@ -116,7 +120,7 @@ function uploadUserImage($image)
 
         if ($ext == 'png' || $ext == 'PNG') {
             $img = imagecreatefrompng($image['tmp_name']);
-        } else if ($ext == 'webp' || $ext == 'webp') {
+        } else if ($ext == 'webp' || $ext == 'WEBP') {
             $img = imagecreatefromwebp($image['tmp_name']);
         } else {
             $img = imagecreatefromjpeg($image['tmp_name']);
