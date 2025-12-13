@@ -1,8 +1,9 @@
 <div class="container-fluid bg-white mt-5">
     <div class="row">
         <div class="col-lg-4 p-4">
-            <h3 class="h-font fw-bold fs-3 mb-2">InnTrack</h3>
+            <h3 class="h-font fw-bold fs-3 mb-2"><?php echo $settings_r['site_title'] ?></h3>
             <p>
+                <?php echo $settings_r['site_about'] ?>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur molestias laudantium aut distinctio provident similique quisquam ad sit voluptates, libero, error ex corporis, id sequi expedita dignissimos maxime quasi rem?
             </p>
         </div>
