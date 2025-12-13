@@ -45,6 +45,48 @@
 
 
 <script>
+    function alert(type, msg) {
+        let bs_class = (type == 'success') ? 'alert-success' : 'alert-danger';
+        let bg_color = (type == 'success') ? '#d1e7dd' : '#f8d7da';
+        let text_color = (type == 'success') ? '#0f5132' : '#842029';
+        let border_color = (type == 'success') ? '#badbcc' : '#f5c2c7';
+
+        let element = document.createElement('div');
+        element.innerHTML = `
+            <div class="alert ${bs_class} alert-dismissible fade show custom-alert" role="alert" 
+                style="background-color: ${bg_color}; color: ${text_color}; border: 1px solid ${border_color}; border-radius: 0.375rem; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); animation: slideInRight 0.3s ease-out;">
+                <strong class="me-2">${msg}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+
+        // Get or create alert container
+        let container = document.getElementById('alert-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'alert-container';
+            container.style.cssText = 'position: fixed; top: 80px; right: 25px; z-index: 1050; min-width: 350px;';
+            document.body.appendChild(container);
+        }
+
+        container.appendChild(element);
+
+        // Auto remove after 4 seconds
+        // setTimeout(function() {
+        //     element.querySelector('.alert').classList.remove('show');
+        //     setTimeout(function() {
+        //         element.remove();
+        //     }, 150);
+        // }, 4000);
+
+        setTimeout(remAlert, 3000);
+    }
+
+    function remAlert() {
+        document.getElementsByClassName('alert')[0].remove();
+    }
+
+
     function setActive() {
         let navbar = document.getElementById('nav-bar');
         let a_tags = navbar.getElementsByTagName('a');
@@ -82,10 +124,27 @@
         modal.hide();
 
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/login_register", true);
+        xhr.open("POST", "ajax/login_register.php", true);
 
         xhr.onload = function() {
-
+            if (this.responseText == 'pass_mismatch') {
+                alert('error', "Password Mismatch!");
+            } else if(this.responseText == 'email_already') {
+                alert('error', "Email is already registered!");
+            } else if(this.responseText == 'phone_already') {
+                alert('error', "Phone number is already registered!");
+            } else if(this.responseText == 'inv_img') {
+                alert('error', "Only JPG, WEBP, and PNG are allowed!");
+            } else if(this.responseText == 'upd_failed') {
+                alert('error', "Image upload failed!");
+            } else if(this.responseText == 'mail_failed') {
+                alert('error', "Cannot send confirmation email! Server down!");
+            } else if(this.responseText == 'ins_failed') {
+                alert('error', "Regisration failed! Server down!");
+            } else {
+                alert('success', "Regisration successful. Confirmation link sent to email!");
+                register_form.reset();
+            }
         }
 
         xhr.send(data);
